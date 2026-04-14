@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weekly IPO & Finance Opportunity Digest</title>
+    <style>
+      body { font-family: Arial, sans-serif; color: #1f2937; }
+      table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+      th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; vertical-align: top; }
+      th { background: #f3f4f6; }
+      h2 { margin-top: 32px; }
+      .small { color: #6b7280; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Weekly IPO & Finance Opportunity Digest</h1>
+    <p class="small">Generated on {{ generated_on }}</p>
+
+    <h2>Executive summary</h2>
+    <p>{{ executive_summary }}</p>
+
+    <h2>Top 5 U.S. IPOs this week</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Company name</th>
+          <th>Website</th>
+          <th>IPO signal</th>
+          <th>Date</th>
+          <th>Why it matters</th>
+          <th>Role we could fill</th>
+          <th>Source</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in top_ipos %}
+        <tr>
+          <td>{{ item.opportunity.company_name }}</td>
+          <td>{{ item.opportunity.website or '-' }}</td>
+          <td>{{ item.opportunity.ipo_signal }}</td>
+          <td>{{ item.opportunity.date }}</td>
+          <td>{{ item.opportunity.why_it_matters }}</td>
+          <td>{{ item.opportunity.role_we_could_fill }}</td>
+          <td>{{ item.opportunity.source_urls | join(', ') }}</td>
+          <td>{{ item.score }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Top 10 U.S. opportunities</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Bucket</th>
+          <th>Company name</th>
+          <th>Website</th>
+          <th>CFO</th>
+          <th>CAO</th>
+          <th>Initiative type</th>
+          <th>Timeline</th>
+          <th>Summary</th>
+          <th>Role we could fill</th>
+          <th>Source</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in top_opportunities %}
+        <tr>
+          <td>{{ item.bucket.value }}</td>
+          <td>{{ item.opportunity.company_name }}</td>
+          <td>{{ item.opportunity.website or '-' }}</td>
+          <td>{{ item.opportunity.cfo }}</td>
+          <td>{{ item.opportunity.cao }}</td>
+          <td>{{ item.opportunity.initiative_type }}</td>
+          <td>{{ item.opportunity.timeline }}</td>
+          <td>{{ item.opportunity.summary }}</td>
+          <td>{{ item.opportunity.role_we_could_fill }}</td>
+          <td>{{ item.opportunity.source_urls | join(', ') }}</td>
+          <td>{{ item.score }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Watchlist / near misses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Bucket</th>
+          <th>Company</th>
+          <th>Initiative</th>
+          <th>Summary</th>
+          <th>Source</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in watchlist %}
+        <tr>
+          <td>{{ item.bucket.value }}</td>
+          <td>{{ item.opportunity.company_name }}</td>
+          <td>{{ item.opportunity.initiative_type }}</td>
+          <td>{{ item.opportunity.summary }}</td>
+          <td>{{ item.opportunity.source_urls | join(', ') }}</td>
+          <td>{{ item.score }}</td>
+        </tr>
+      {% else %}
+        <tr>
+          <td colspan="6">No watchlist entries this week.</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Methodology</h2>
+    <p>{{ methodology }}</p>
+  </body>
+</html>
