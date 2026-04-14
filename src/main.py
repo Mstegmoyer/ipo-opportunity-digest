@@ -75,14 +75,11 @@ def _write_exports(*, payload, html: str, watchlist, output_dir: Path) -> None:
     LOGGER.info("Export stage completed")
 
 
-def _safe_send_email(*, enabled: bool, dry_run: bool, export_only: bool, subject: str, html_body: str) -> bool:
+def _safe_send_email(*, enabled: bool, subject: str, html_body: str) -> bool:
     """Send digest email only when explicitly enabled and safe."""
 
-    if dry_run or export_only:
-        LOGGER.info("Email send disabled automatically in dry-run/export-only mode")
-        return False
     if not enabled:
-        LOGGER.info("Email send skipped (use --send-email to enable)")
+        LOGGER.info("Email send skipped")
         return False
 
     LOGGER.info("Email stage started")
@@ -99,14 +96,25 @@ def run_cli(argv: list[str] | None = None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="Generate outputs without sending email")
     parser.add_argument("--export-only", action="store_true", help="Write JSON/CSV/HTML previews only")
     parser.add_argument("--test-mode", action="store_true", help="Use deterministic fixture data and fixed date")
-    parser.add_argument("--send-email", action="store_true", help="Enable live email send (disabled in dry-run/export-only)")
+    parser.add_argument("--send-email", action="store_true", help="Enable live email send")
     parser.add_argument("--fixtures-dir", type=Path, default=Path("data/samples"), help="Fixture directory")
     parser.add_argument("--output-dir", type=Path, default=Path("sample_output"), help="Export output directory")
     parser.add_argument("--history-file", type=Path, default=Path("sample_output/opportunity_history.json"), help="History JSON path")
     parser.add_argument("--history-cooldown-days", type=int, default=30, help="Repeat suppression cooldown")
     args = parser.parse_args(argv)
 
+    # Email is only allowed when explicitly requested and not in a safe test mode.
+    send_email = args.send_email and not args.dry_run and not args.export_only
+
     LOGGER.info("Pipeline stage started: args=%s", args)
+    LOGGER.info(
+        "Email safety: requested=%s dry_run=%s export_only=%s final_send_email=%s",
+        args.send_email,
+        args.dry_run,
+        args.export_only,
+        send_email,
+    )
+
     run_date = date(2026, 4, 14) if args.test_mode else date.today()
 
     use_fixtures = args.dry_run or args.export_only or args.test_mode
@@ -123,7 +131,6 @@ def run_cli(argv: list[str] | None = None) -> int:
         len(payload.top_opportunities),
     )
 
-    # Dry-run report for suppressed vs retained using mock prior history.
     if args.dry_run and history_by_company:
         unsuppressed_payload, _ = build_digest(run_date=run_date, history_by_company=None, **inputs)
         retained, suppressed = apply_repeat_suppression(
@@ -147,9 +154,7 @@ def run_cli(argv: list[str] | None = None) -> int:
         print(f"test_mode=true top_ipos={len(payload.top_ipos)} top_opportunities={len(payload.top_opportunities)}")
 
     email_sent = _safe_send_email(
-        enabled=args.send_email,
-        dry_run=args.dry_run,
-        export_only=args.export_only,
+        enabled=send_email,
         subject=f"Weekly IPO & Finance Opportunity Digest - {run_date.isoformat()}",
         html_body=html,
     )
