@@ -19,6 +19,7 @@ def build_digest(
     sec_opportunity_records: list[dict[str, str]] | None = None,
     press_release_records: list[dict[str, str]] | None = None,
     business_news_records: list[dict[str, str]] | None = None,
+    history_by_company: dict[str, dict[str, str]] | None = None,
 ) -> tuple[DigestPayload, str]:
     """Build digest payload and rendered HTML from normalized source inputs."""
 
@@ -33,6 +34,7 @@ def build_digest(
         raw_ipos=raw_ipos,
         raw_opportunities=raw_opportunities,
         today=run_date,
+        history_by_company=history_by_company,
     )
 
     payload = DigestPayload(top_ipos=top_ipos, top_opportunities=top_opportunities)

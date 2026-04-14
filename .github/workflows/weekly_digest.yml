@@ -4,18 +4,31 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 13 * * 1"
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-concurrency:
-  group: weekly-digest-${{ github.ref }}
-  cancel-in-progress: true
+permissions:
+  contents: read
+
+env:
+  # Opt-in to Node.js 24 for JavaScript-based actions ahead of Node 20 removal.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
     env:
-      PYTHONUNBUFFERED: "1"
-      TIMEZONE: America/New_York
-
+      # Runtime env vars are wired to secrets for future live-email mode.
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,48 +37,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
-
-      - name: Show repo contents
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 3 -type f | sort | sed -n '1,200p'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          python -V
-          pip freeze | sed -n '1,200p'
 
       - name: Run tests
-        run: |
-          pytest -q
+        run: pytest -q
 
-      - name: Create output folders
-        run: |
-          mkdir -p data/output data/samples
-
-      - name: Run digest in export-only mode
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: |
-          python -m src.main --export-only
-          find data -maxdepth 3 -type f | sort || true
-    
-      - name: Upload output artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: weekly-digest-output
-          path: |
-            data/output/**
-            data/samples/**
-          if-no-files-found: warn
+      - name: Run safe digest dry-run
+        run: python -m src.main --test-mode --export-only

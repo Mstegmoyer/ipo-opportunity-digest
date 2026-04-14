@@ -1,5 +1,466 @@
 {
-  "generated_on": "2026-04-14",
-  "top_ipos": [],
-  "top_opportunities": []
+  "top_ipos": [
+    {
+      "opportunity": {
+        "company_name": "Summit Grid",
+        "ipo_signal": "F-1 submitted",
+        "date": "2026-04-12",
+        "why_it_matters": "Cross-border filing raises SEC reporting and controls complexity.",
+        "role_we_could_fill": "SEC & Regulatory Reporting",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/summit-f1"
+        ],
+        "company_qualification": "fortune_1000",
+        "website": "https://summitgrid.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Atlas Robotics",
+        "ipo_signal": "S-1 filed",
+        "date": "2026-04-10",
+        "why_it_matters": "Large-scale IPO readiness effort likely underway.",
+        "role_we_could_fill": "IPO Readiness",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/atlas-s1"
+        ],
+        "company_qualification": "revenue_gt_2b",
+        "website": "https://atlas.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Harbor Payments",
+        "ipo_signal": "S-1/A amendment filed",
+        "date": "2026-04-09",
+        "why_it_matters": "Amendment indicates accelerated readiness and disclosure refinement.",
+        "role_we_could_fill": "Technical Accounting",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/harbor-s1a"
+        ],
+        "company_qualification": "revenue_gt_2b",
+        "website": "https://harborpayments.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Northwind Data",
+        "ipo_signal": "Targeting NYSE listing window",
+        "date": "2026-04-08",
+        "why_it_matters": "Creates near-term finance transformation demand.",
+        "role_we_could_fill": "SEC & Regulatory Reporting",
+        "source_urls": [
+          "https://example.com/ipo-calendar/northwind"
+        ],
+        "company_qualification": "fortune_1000",
+        "website": "https://northwind.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Cobalt Logistics",
+        "ipo_signal": "Roadshow timeline announced",
+        "date": "2026-04-07",
+        "why_it_matters": "Roadshow prep creates close, reporting, and forecast pressure.",
+        "role_we_could_fill": "Financial Reporting",
+        "source_urls": [
+          "https://example.com/ipo-calendar/cobalt"
+        ],
+        "company_qualification": "revenue_gt_2b",
+        "website": "https://cobaltlogistics.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    }
+  ],
+  "top_opportunities": [
+    {
+      "opportunity": {
+        "company_name": "Granite Pharma",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "Regulatory / ESG Modernization",
+        "trigger_date": "2026-04-11",
+        "timeline": "12 months",
+        "summary": "Announced regulated reporting platform overhaul and controls redesign.",
+        "role_we_could_fill": "SEC & Regulatory Reporting",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/granite-8k"
+        ],
+        "website": "https://granitepharma.example.com",
+        "trigger_keywords": [
+          "controls",
+          "esg",
+          "regulatory"
+        ],
+        "cfo": "Riley Chen",
+        "cao": "Drew Patel",
+        "is_us_based": true,
+        "publication_date": "2026-04-11"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Cresta Software",
+        "company_qualification": "pe_backed_large_scale",
+        "initiative_type": "IPO Readiness",
+        "trigger_date": "2026-04-10",
+        "timeline": "12 months",
+        "summary": "Pre-IPO readiness program announced with controllership uplift plans.",
+        "role_we_could_fill": "IPO Readiness",
+        "source_urls": [
+          "https://news.example.com/cresta-ipo-readiness"
+        ],
+        "website": "https://cresta.example.com",
+        "trigger_keywords": [
+          "controls",
+          "ipo",
+          "reporting"
+        ],
+        "cfo": "Quinn Davis",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-10"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Apex Manufacturing",
+        "company_qualification": "fortune_1000",
+        "initiative_type": "Material Weakness / Restatement",
+        "trigger_date": "2026-04-09",
+        "timeline": "2 quarters",
+        "summary": "Disclosed internal control remediation with expanded transformation scope.",
+        "role_we_could_fill": "SOX / Internal Audit / Controls",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/apex-8k"
+        ],
+        "website": "https://apex.example.com",
+        "trigger_keywords": [
+          "controls",
+          "material weakness",
+          "restatement"
+        ],
+        "cfo": "Jordan Lee",
+        "cao": "Morgan Diaz",
+        "is_us_based": true,
+        "publication_date": "2026-04-09"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Vertex Mobility",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "Process Enhancement",
+        "trigger_date": "2026-04-08",
+        "timeline": "8 months",
+        "summary": "Finance close acceleration program announced after earnings delays.",
+        "role_we_could_fill": "GL / Month-End Close",
+        "source_urls": [
+          "https://news.example.com/vertex-close-program"
+        ],
+        "website": "https://vertexmobility.example.com",
+        "trigger_keywords": [
+          "close",
+          "process",
+          "reporting"
+        ],
+        "cfo": "Reese Miller",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-08"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Helios Energy",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "ERP / EPM Transformation",
+        "trigger_date": "2026-04-06",
+        "timeline": "18 months",
+        "summary": "Announced enterprise ERP transformation and close modernization.",
+        "role_we_could_fill": "System Implementation",
+        "source_urls": [
+          "https://investor.helios.example.com/news/erp-program"
+        ],
+        "website": "https://helios.example.com",
+        "trigger_keywords": [
+          "close",
+          "erp",
+          "transformation"
+        ],
+        "cfo": "Casey Smith",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-06"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Meridian Telecom",
+        "company_qualification": "fortune_1000",
+        "initiative_type": "Capital Markets",
+        "trigger_date": "2026-04-05",
+        "timeline": "6 months",
+        "summary": "Debt refinancing and capital raise require tighter forecasts and reporting.",
+        "role_we_could_fill": "Budgeting & Forecasting",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/meridian-8k"
+        ],
+        "website": "https://meridiantelecom.example.com",
+        "trigger_keywords": [
+          "capital markets",
+          "debt",
+          "forecast"
+        ],
+        "cfo": "Ari Flores",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-05"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "BlueRiver Health",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "M&A / Integration",
+        "trigger_date": "2026-04-04",
+        "timeline": "9 months",
+        "summary": "Divestiture and carve-out program announced with finance separation work.",
+        "role_we_could_fill": "Divestitures / Carve-Outs",
+        "source_urls": [
+          "https://news.example.com/blueriver-carveout"
+        ],
+        "website": "https://blueriver.example.com",
+        "trigger_keywords": [
+          "carve-out",
+          "divestiture",
+          "separation"
+        ],
+        "cfo": "Avery Patel",
+        "cao": "Taylor Kim",
+        "is_us_based": true,
+        "publication_date": "2026-04-04"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Pioneer Retail",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "Strategic Capex",
+        "trigger_date": "2026-04-03",
+        "timeline": "18 months",
+        "summary": "Major automation capex program announced with finance transformation dependencies.",
+        "role_we_could_fill": "Project Management",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/pioneer-8k"
+        ],
+        "website": "https://pioneerretail.example.com",
+        "trigger_keywords": [
+          "automation",
+          "capex",
+          "reporting"
+        ],
+        "cfo": "Taylor Wong",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-03"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Nova Foods",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "Restructuring",
+        "trigger_date": "2026-04-02",
+        "timeline": "9 months",
+        "summary": "Cost restructuring program launched with finance operating model redesign.",
+        "role_we_could_fill": "Restructuring",
+        "source_urls": [
+          "https://investor.novafoods.example.com/news/restructuring"
+        ],
+        "website": "https://novafoods.example.com",
+        "trigger_keywords": [
+          "cost",
+          "operating model",
+          "restructuring"
+        ],
+        "cfo": "Jamie Ross",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-02"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Union Aerospace",
+        "company_qualification": "fortune_1000",
+        "initiative_type": "Advisory RFP",
+        "trigger_date": "2026-04-01",
+        "timeline": "6 months",
+        "summary": "Issued advisory RFP for enterprise finance transformation governance.",
+        "role_we_could_fill": "Project Management",
+        "source_urls": [
+          "https://investor.unionaero.example.com/news/advisory-rfp"
+        ],
+        "website": "https://unionaero.example.com",
+        "trigger_keywords": [
+          "governance",
+          "rfp",
+          "transformation"
+        ],
+        "cfo": "Morgan Hale",
+        "cao": "Sam Ortiz",
+        "is_us_based": true,
+        "publication_date": "2026-04-01"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    }
+  ]
 }

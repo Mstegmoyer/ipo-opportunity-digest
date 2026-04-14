@@ -13,9 +13,10 @@ def score_and_select(
     raw_ipos: list[IPOOpportunity],
     raw_opportunities: list[Opportunity],
     today: date,
+    history_by_company: dict[str, dict[str, str]] | None = None,
 ) -> tuple[list[ScoredIPOOpportunity], list[ScoredOpportunity]]:
     """Deterministically score and select finalists."""
 
     top_ipos = shortlist_ipos(raw_ipos, today=today)
-    top_opportunities = shortlist_opportunities(raw_opportunities, today=today)
+    top_opportunities = shortlist_opportunities(raw_opportunities, today=today, history_by_company=history_by_company)
     return top_ipos, top_opportunities

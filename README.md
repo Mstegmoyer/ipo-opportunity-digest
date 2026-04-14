@@ -16,51 +16,59 @@ This scaffold implements deterministic qualification and scoring foundations ali
 
 ```text
 .
-├── .env.example
-├── .github/workflows/weekly_digest.yml
-├── requirements.txt
+├── data/
+│   └── samples/
+│       ├── ipos.json
+│       └── opportunities.json
 ├── sample_output/
 │   ├── sample_digest.csv
+│   ├── sample_digest.html
 │   └── sample_digest.json
 ├── src/
-│   ├── config.py
-│   ├── constants.py
-│   ├── main.py
-│   ├── models.py
-│   ├── qualify.py
-│   ├── rendering.py
-│   ├── scoring.py
-│   └── selectors.py
 ├── templates/
-│   └── weekly_digest.html.j2
 └── tests/
-    ├── test_qualify.py
-    ├── test_rendering.py
-    ├── test_scoring.py
-    └── test_selectors.py
 ```
 
-## Quickstart
+## Exact local test commands
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env
-pytest
-python -m src.main
+pytest -q
+pytest -vv
+pytest tests/test_scoring.py -vv
 ```
+
+## Exact local dry-run / export commands
+
+```bash
+# Generates HTML + JSON + CSV previews and never sends email
+python -m src.main --dry-run
+
+# Writes only preview files (no HTML stdout)
+python -m src.main --export-only
+
+# Uses deterministic fixtures + fixed date for stable test outputs
+python -m src.main --test-mode
+```
+
+## Exact cloud/CI test commands
+
+The GitHub Actions workflow runs:
+
+```bash
+pytest
+python -m src.main --dry-run > /tmp/digest.html
+```
+
+## Safety behavior
+
+- Email sending is **disabled automatically** in `--dry-run` and `--export-only` modes.
+- Email is only attempted when `--send-email` is explicitly passed **and** not in dry/export mode.
 
 ## What is intentionally not implemented yet
 
 - Live data-source adapters (SEC/news/RSS/vendor APIs)
-- Production email transport integration
+- Production-grade secrets management and email retry policies
 - LLM summarization/classification step for finalists
-
-## Next implementation milestones
-
-1. Add source adapters that normalize opportunities into `src.models`.
-2. Persist raw/source metadata and publication dates.
-3. Enforce summary length trimming for table outputs (<=40 words).
-4. Add CSV/JSON export pipeline and SMTP sender.
-5. Schedule weekly run via GitHub Actions and/or managed orchestrator.

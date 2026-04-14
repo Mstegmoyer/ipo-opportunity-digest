@@ -1,0 +1,61 @@
+{
+  "sec_ipo_records": [
+    {
+      "company_name": "Atlas Robotics",
+      "filing_date": "2026-04-10",
+      "filing_url": "https://www.sec.gov/ixviewer/atlas-s1",
+      "ipo_signal": "S-1 filed",
+      "why_it_matters": "Large-scale IPO readiness effort likely underway.",
+      "role_we_could_fill": "IPO Readiness",
+      "qualification": "revenue_gt_2b",
+      "website": "https://atlas.example.com",
+      "is_us_based": "true"
+    },
+    {
+      "company_name": "Summit Grid",
+      "filing_date": "2026-04-12",
+      "filing_url": "https://www.sec.gov/ixviewer/summit-f1",
+      "ipo_signal": "F-1 submitted",
+      "why_it_matters": "Cross-border filing raises SEC reporting and controls complexity.",
+      "role_we_could_fill": "SEC & Regulatory Reporting",
+      "qualification": "fortune_1000",
+      "website": "https://summitgrid.example.com",
+      "is_us_based": "true"
+    },
+    {
+      "company_name": "Harbor Payments",
+      "filing_date": "2026-04-09",
+      "filing_url": "https://www.sec.gov/ixviewer/harbor-s1a",
+      "ipo_signal": "S-1/A amendment filed",
+      "why_it_matters": "Amendment indicates accelerated readiness and disclosure refinement.",
+      "role_we_could_fill": "Technical Accounting",
+      "qualification": "revenue_gt_2b",
+      "website": "https://harborpayments.example.com",
+      "is_us_based": "true"
+    }
+  ],
+  "ipo_calendar_records": [
+    {
+      "company_name": "Northwind Data",
+      "source_date": "2026-04-08",
+      "source_url": "https://example.com/ipo-calendar/northwind",
+      "signal": "Targeting NYSE listing window",
+      "why_it_matters": "Creates near-term finance transformation demand.",
+      "role_we_could_fill": "SEC & Regulatory Reporting",
+      "qualification": "fortune_1000",
+      "website": "https://northwind.example.com",
+      "is_us_based": "true"
+    },
+    {
+      "company_name": "Cobalt Logistics",
+      "source_date": "2026-04-07",
+      "source_url": "https://example.com/ipo-calendar/cobalt",
+      "signal": "Roadshow timeline announced",
+      "why_it_matters": "Roadshow prep creates close, reporting, and forecast pressure.",
+      "role_we_could_fill": "Financial Reporting",
+      "qualification": "revenue_gt_2b",
+      "website": "https://cobaltlogistics.example.com",
+      "is_us_based": "true"
+    }
+  ]
+}
