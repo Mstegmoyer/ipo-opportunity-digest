@@ -47,7 +47,7 @@ jobs:
         run: |
           mkdir -p data/output data/samples
 
-      - name: Run digest in dry-run mode
+      - name: Run digest in export-only mode
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
@@ -57,10 +57,9 @@ jobs:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: |
-          python -m src.main --dry-run
-          echo "After run:"
+          python -m src.main --export-only
           find data -maxdepth 3 -type f | sort || true
-
+    
       - name: Upload output artifacts
         if: always()
         uses: actions/upload-artifact@v4
