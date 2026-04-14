@@ -63,9 +63,11 @@ python -m src.main --dry-run > /tmp/digest.html
 ```
 
 ## Safety behavior
-
-- Email sending is **disabled automatically** in `--dry-run` and `--export-only` modes.
-- Email is only attempted when `--send-email` is explicitly passed **and** not in dry/export mode.
+This project is safe to test in CI.
+- `--dry-run` generates outputs but never sends email.
+- `--export-only` writes output files only and never sends email.
+- Email is attempted only when `--send-email` is explicitly passed.
+- If `--dry-run` or `--export-only` is set, email sending is disabled even if `--send-email` is also passed.
 
 ## What is intentionally not implemented yet
 
