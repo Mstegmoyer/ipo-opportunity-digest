@@ -1,0 +1,156 @@
+{
+  "top_ipos": [
+    {
+      "opportunity": {
+        "company_name": "Atlas Robotics",
+        "ipo_signal": "S-1 filed",
+        "date": "2026-04-10",
+        "why_it_matters": "Large-scale IPO readiness effort likely underway.",
+        "role_we_could_fill": "IPO Readiness",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/atlas-s1"
+        ],
+        "company_qualification": "revenue_gt_2b",
+        "website": "https://atlas.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Northwind Data",
+        "ipo_signal": "Targeting NYSE listing window",
+        "date": "2026-04-08",
+        "why_it_matters": "Creates near-term finance transformation demand.",
+        "role_we_could_fill": "SEC & Regulatory Reporting",
+        "source_urls": [
+          "https://example.com/ipo-calendar/northwind"
+        ],
+        "company_qualification": "fortune_1000",
+        "website": "https://northwind.example.com",
+        "is_us_based": true
+      },
+      "score": 93,
+      "components": {
+        "trigger_strength": 22,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 13,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    }
+  ],
+  "top_opportunities": [
+    {
+      "opportunity": {
+        "company_name": "Apex Manufacturing",
+        "company_qualification": "fortune_1000",
+        "initiative_type": "Material Weakness / Restatement",
+        "trigger_date": "2026-04-09",
+        "timeline": "2 quarters",
+        "summary": "Disclosed internal control remediation with expanded transformation scope.",
+        "role_we_could_fill": "SOX / Internal Audit / Controls",
+        "source_urls": [
+          "https://www.sec.gov/ixviewer/apex-8k"
+        ],
+        "website": "https://apex.example.com",
+        "trigger_keywords": [
+          "controls",
+          "material weakness",
+          "restatement"
+        ],
+        "cfo": "Jordan Lee",
+        "cao": "Morgan Diaz",
+        "is_us_based": true,
+        "publication_date": "2026-04-09"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "Helios Energy",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "ERP / EPM Transformation",
+        "trigger_date": "2026-04-06",
+        "timeline": "18 months",
+        "summary": "Announced enterprise ERP transformation and close modernization.",
+        "role_we_could_fill": "System Implementation",
+        "source_urls": [
+          "https://investor.helios.example.com/news/erp-program"
+        ],
+        "website": "https://helios.example.com",
+        "trigger_keywords": [
+          "close",
+          "erp",
+          "transformation"
+        ],
+        "cfo": "Casey Smith",
+        "cao": "Unknown",
+        "is_us_based": true,
+        "publication_date": "2026-04-06"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    },
+    {
+      "opportunity": {
+        "company_name": "BlueRiver Health",
+        "company_qualification": "revenue_gt_2b",
+        "initiative_type": "M&A / Integration",
+        "trigger_date": "2026-04-04",
+        "timeline": "9 months",
+        "summary": "Divestiture and carve-out program announced with finance separation work.",
+        "role_we_could_fill": "Divestitures / Carve-Outs",
+        "source_urls": [
+          "https://news.example.com/blueriver-carveout"
+        ],
+        "website": "https://blueriver.example.com",
+        "trigger_keywords": [
+          "carve-out",
+          "divestiture",
+          "separation"
+        ],
+        "cfo": "Avery Patel",
+        "cao": "Taylor Kim",
+        "is_us_based": true,
+        "publication_date": "2026-04-04"
+      },
+      "score": 90,
+      "bucket": "0\u201330 days",
+      "components": {
+        "trigger_strength": 20,
+        "company_qualification_fit": 20,
+        "enterprise_scale_strategic_relevance": 12,
+        "offering_alignment": 20,
+        "recency": 10,
+        "source_confidence": 8
+      }
+    }
+  ]
+}

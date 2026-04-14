@@ -1,0 +1,5 @@
+section,bucket,company_name,website,cfo,cao,initiative_type,timeline,summary,role_we_could_fill,source,score
+top10,0–30 days,Apex Manufacturing,https://apex.example.com,Jordan Lee,Morgan Diaz,Material Weakness / Restatement,2 quarters,Disclosed internal control remediation with expanded transformation scope.,SOX / Internal Audit / Controls,https://www.sec.gov/ixviewer/apex-8k,90
+top10,0–30 days,Helios Energy,https://helios.example.com,Casey Smith,Unknown,ERP / EPM Transformation,18 months,Announced enterprise ERP transformation and close modernization.,System Implementation,https://investor.helios.example.com/news/erp-program,90
+top10,0–30 days,BlueRiver Health,https://blueriver.example.com,Avery Patel,Taylor Kim,M&A / Integration,9 months,Divestiture and carve-out program announced with finance separation work.,Divestitures / Carve-Outs,https://news.example.com/blueriver-carveout,90
+watchlist,31–90 days,Crestline Foods,https://crestline.example.com,Unknown,Unknown,Restructuring,12 months,Restructuring announced; likely near-miss due to lower urgency.,Restructuring,https://news.example.com/crestline-restructuring,78
